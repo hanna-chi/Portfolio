@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jane Doe || About</title>
+  <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.min.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="nav" id="nav">
+    <div class="nav-center">
+      <!-- nav header -->
+      <div class="nav-header">
+        <a href="index.html"><img src="./images/favicon1.png" class="nav-logo" alt="logo image" /></a>
+        <button class="nav-btn" id="nav-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <!-- nav links -->
+      <ul class="nav-links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="projects.html">projects</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- end of navbar -->
+  <!-- sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div>
+      <button id="close-btn" class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="sidebar-links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="projects.html">projects</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+      <ul class="social-icons">
+        <!-- single item -->
+        <li>
+          <a href="https://www.facebook.com/" target="blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+        <!-- single item -->
+        <li>
+          <a href="https://www.linkedin.com/" target="blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+        <!-- single item -->
+        <li>
+          <a href="https://www.squarespace.com/" target="blank" class="social-icon">
+            <i class="fab fa-squarespace"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+        <!-- single item -->
+        <li>
+          <a href="https://www.behance.net/" target="blank" class="social-icon">
+            <i class="fab fa-behance"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+        <!-- single item -->
+        <li>
+          <a href="https://www.instagram.com/" target="blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+      </ul>
+    </div>
+  </aside>
+  <!-- end of sidebar -->
+
+  <section class="section single-page">
+    <!-- section title -->
+    <div class="section-title">
+      <h2>contact me</h2>
+      <div class="underline"></div>
+    </div>
+    <!-- end of section title -->
+    <!-- contacts left side -->
+    <div class="section contact-section">
+      <div class="contacts">
+          <p><span class="contact">E-mail:</span><br>email@gmail.com</p>
+          <p><span class="contact">Phone:</span><br>(777)777-77-77</p>
+          <p><span class="contact">Address:</span><br>New York <br> St. Street 78</p>
+      </div>
+      <!-- end of contacts left side -->
+      <!-- contacts right side -->
+      <form class="form-section" action="confirmation.html">
+        <div class="form-inner">
+
+          <label for="fname">full name*:</label>
+          <input type="text" id="fname" class="input" placeholder="Your full name.." required>
+
+          <label for="email">email*:</label>
+          <input id="email" type="email" class="input" placeholder="Your email.." required>
+
+          <label for="services">needed services*:</label>
+          <select id="services" name="services" class="input" >
+            <!-- <option  disabled selected>Please choose</option> -->
+            <option value="eCommerce bussiness" selected>eCommerce bussiness</option>
+            <option value="UX/UI design">UX/UI design</option>
+            <option value="Online services">Online services</option>
+          </select>
+
+          <label for="subject">subject*:</label>
+          <textarea id="message" name="message" class="input" placeholder="Your message.."required></textarea>
+
+          <input type="checkbox" id="custom-checkbox">
+          <label for="custom-checkbox">Send me a copy</label>
+
+          <button type="submit"  class="btn" onclick="e()">Submit</button>
+        </div>
+      </form>
+      </div>
+        <!-- end of contacts right side -->
+    </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <ul class="social-icons">
+      <!-- single item -->
+      <li>
+        <a href="https://www.facebook.com/" target="blank" class="social-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+      <!-- end of single item -->
+      <!-- single item -->
+      <li>
+        <a href="https://www.linkedin.com/" target="blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      <!-- end of single item -->
+      <!-- single item -->
+      <li>
+        <a href="https://www.squarespace.com/" target="blank" class="social-icon">
+          <i class="fab fa-squarespace"></i>
+        </a>
+      </li>
+      <!-- end of single item -->
+      <!-- single item -->
+      <li>
+        <a href="https://www.behance.net/" target="blank" class="social-icon">
+          <i class="fab fa-behance"></i>
+        </a>
+      </li>
+      <!-- end of single item -->
+      <!-- single item -->
+      <li>
+        <a href="https://www.instagram.com/" target="blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+      <!-- end of single item -->
+    </ul>
+
+    <p>&copy; <span id="date"></span> Jane Doe. All rights reserved.</p>
+  </footer>
+  <script type="text/javascript">
+    function e() {
+      let fname = document.getElementById("fname").value;
+      localStorage.setItem('fname', fname);
+      let email = document.getElementById("email").value;
+      localStorage.setItem('email', email);
+      let services = document.getElementById("services").value;
+      localStorage.setItem('services', services);
+      let message = document.getElementById("message").value;
+      localStorage.setItem('message', message);
+    }
+  </script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
+
